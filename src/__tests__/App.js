@@ -2,12 +2,14 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import App from '../components/App';
 
-it('should render <App /> without user', () => {
-
+it('should render <App />', () => {
+  const wrapper = shallow(<App user="" />);
+  expect(wrapper.find('#email')).toBeTruthy();
 });
 
 it('should render <App /> with user', () => {
-
+  const wrapper = mount(<App user="zero_cool" />);
+  expect(wrapper.state().user).toBe('zero_cool');
 });
 
 it('call the internal method loginSuccessful', () => {

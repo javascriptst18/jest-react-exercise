@@ -1,0 +1,47 @@
+{
+  "name": "jest-react-testing",
+  "description": "Example react app to use for testing and reaching code coverage",
+  "private": true,
+  "version": "0.1.0",
+  "author": "Jesper Orb <jesperorb@gmail.com> (https://jesperorb.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "enzyme": "3.4.2",
+    "enzyme-adapter-react-16": "1.2.0",
+    "prop-types": "15.6.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-scripts": "1.1.4",
+    "react-test-renderer": "16.4.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "eslint": "5.3.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "3.0.1",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.1",
+    "eslint-plugin-react": "7.11.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/*/*.js",
+      "!src/index.js",
+      "!src/registerServiceWorker.js",
+      "!src/setupTests.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 0
+      }
+    }
+  }
+}

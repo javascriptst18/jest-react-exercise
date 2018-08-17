@@ -22,10 +22,10 @@ it('call the internal method loginSuccessful', () => {
 it('call the internal method logout', () => {
   const wrapper = mount(<App user="jesper@jesper.se" />);
   expect(wrapper.state().user).toBe('jesper@jesper.se');
-  wrapper.find('#user').simulate('click');
+  wrapper.find('.user').simulate('click');
   expect(wrapper.state().user).toBe('');
 });
 
 it('shows logged out state then shows logged in state on successful login', () => {
-  
+
 });

@@ -13,6 +13,6 @@ it('should get the user from localStorage', () => {
 });
 
 it('should get empty user from localStorage', () => {
-
+  
 });
 

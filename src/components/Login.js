@@ -49,7 +49,8 @@ class Login extends Component {
       >
         <Message message={this.state.message} />
         <label htmlFor="email" className="mb-4 w-full">
-          Email <br />
+          Email 
+          <br />
           <input
             type="email"
             name="email"
@@ -62,7 +63,8 @@ class Login extends Component {
           />
         </label>
         <label htmlFor="password" className="mb-4  w-full">
-          Password <br />
+          Password 
+          <br />
           <input
             type="password"
             name="password"

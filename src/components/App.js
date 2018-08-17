@@ -30,6 +30,7 @@ class App extends Component {
           <button
             onClick={this.logout}
             className="fixed pin-t p-l bg-purple-dark text-white text-center p-4 rounded-br user"
+            type="button"
           >
             {this.state.user}
           </button>

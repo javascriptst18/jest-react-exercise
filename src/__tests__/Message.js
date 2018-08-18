@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import Message from '../components/Message';
 
 it('shows default message', () => {
@@ -23,7 +23,6 @@ it('shows success message', () => {
     body: 'Haha'
   }
   const wrapper = shallow(<Message message={message} />);
-  // Varför är detta bättre?
   expect(wrapper.find('p').hasClass('bg-green-lightest')).toBeTruthy();
 });
 

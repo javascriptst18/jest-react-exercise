@@ -27,5 +27,8 @@ it('call the internal method logout', () => {
 });
 
 it('shows logged out state then shows logged in state on successful login', () => {
-
+  const wrapper = mount(<App user="" />);
+  expect(wrapper.exists('#user')).toBeFalsy();
+  wrapper.setState({ user: 'jesper@jesper.se'});
+  expect(wrapper.find('#user').text()).toBe('jesper@jesper.se');
 });

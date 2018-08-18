@@ -17,14 +17,12 @@ class Login extends Component {
   onSubmit = (event) => {
     event.preventDefault();
     if (validateLogin(this.state.email, this.state.password)) {
+      this.props.loginSuccessful(this.state.email);
       this.setState(
         {
           message: { type: 'SUCCESS', body: 'Logged in' },
           email: '',
           password: ''
-        },
-        () => {
-          this.props.loginSuccessful(this.state.email);
         }
       );
     } else {
